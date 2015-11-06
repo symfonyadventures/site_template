@@ -4,6 +4,16 @@ parameters:
 #    parameter_name: value
 
 services:
+    user_registration_listener:
+        class: AppBundle\EventListener\FOSUserEventListener
+        arguments:
+            - @doctrine.orm.entity_manager
+        tags:
+            - { name: kernel.event_listener, event: fos_user.registration.completed, method: onRegistrationCompleted }
+
+    authentication.handler.login_success_handler:
+        class:  AppBundle\Security\Authentication\Handler\LoginSuccessHandler
+        arguments:  [@router, @security.context]
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
