@@ -1,3 +1,7 @@
+s_asite:
+    resource: "@SAsiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
