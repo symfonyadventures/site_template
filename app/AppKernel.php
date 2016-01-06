@@ -19,7 +19,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Gregwar\ImageBundle\GregwarImageBundle(),
-            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(), 
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new SA\siteBundle\SAsiteBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

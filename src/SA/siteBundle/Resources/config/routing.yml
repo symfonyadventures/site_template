@@ -1,0 +1,3 @@
+s_asite_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SAsiteBundle:Default:index }
