@@ -1,3 +1,7 @@
-s_asite_homepage:
-    path:     /hello/{name}
+s_asite_index:
+    path: /
     defaults: { _controller: SAsiteBundle:Default:index }
+
+getuser:
+    path:     /getuser/{id}
+    defaults: { _controller: SAsiteBundle:Default:getuser }

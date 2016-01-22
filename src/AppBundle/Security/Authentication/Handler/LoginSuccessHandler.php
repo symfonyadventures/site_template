@@ -26,7 +26,7 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
 
         $user = $this->security->getToken()->getUser();
         
-
+        return new RedirectResponse("/");
         if ($this->security->isGranted('ROLE_ADMIN'))
         {
             $response = new RedirectResponse($this->router->generate('index'));
